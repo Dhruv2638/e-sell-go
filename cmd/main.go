@@ -20,11 +20,11 @@ func main() {
 		Net:                  "tcp",
 		AllowNativePasswords: true,
 		ParseTime:            true,
-	})
+	}) // This is just for opening the connection
 	if err != nil {
 		log.Fatal(err)
 	}
-	initStorage(db)
+	initStorage(db) // this connectes to DB
 	server := api.NewAPIServer(":8080", db)
 	if err := server.Run(); err != nil {
 		log.Fatal(err)
