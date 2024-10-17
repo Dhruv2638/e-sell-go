@@ -25,6 +25,8 @@ func main() {
 		log.Fatal(err)
 	}
 
+	defer db.Close()
+
 	driver, err := mysql.WithInstance(db, &mysql.Config{})
 	if err != nil {
 		log.Fatal(err)
@@ -34,6 +36,7 @@ func main() {
 		"mysql",
 		driver,
 	)
+
 	if err != nil {
 		log.Fatal(err)
 	}

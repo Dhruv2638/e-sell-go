@@ -24,7 +24,7 @@ func initConfig() Config {
 		Port:       getEnv("PORT", "3000"),
 		DBUser:     getEnv("DB_USER", ""),
 		DBPassword: getEnv("DB_PWD", ""),
-		DBName:     getEnv("DB_NAME", ""),
+		DBName:     getEnv("DB_NAME", "ecom"),
 		DBAddress:  getEnv("DB_ADDR", ""),
 	}
 }
